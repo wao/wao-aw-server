@@ -1,0 +1,10 @@
+services:
+  viewer:
+    image: wao-aw-server
+    user: "1000:1000"
+    ports:
+      - '5600:5600'
+    volumes: 
+      - /home/yangchen/.local/share/activitywatch:/home/awserver/.local/share/activitywatch
+    command: aw-server --host 0.0.0.0
+    tty: true
