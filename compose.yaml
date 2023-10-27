@@ -5,6 +5,6 @@ services:
     ports:
       - '5600:5600'
     volumes: 
-      - /home/yangchen/.local/share/activitywatch:/home/awserver/.local/share/activitywatch
+      - ${HOME}/.local/share/activitywatch:/home/awserver/.local/share/activitywatch
     command: aw-server --host 0.0.0.0
     tty: true
